@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+E:\Monika Office\4Element\core Java\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+183062507.index
+2136611657.index
+4276022986.index
+1409392768.index
+2912033722.index
+2911435417.index

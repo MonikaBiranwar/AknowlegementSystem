@@ -1,22 +1,25 @@
 package com.elemetAknowlegment.Entity;
 
 import java.time.LocalDate;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
+
+@Entity
+@Table(name="order Header Details")
 public class orderHeader {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ordId;
 	private String userName;
 	private String userMobileNo;
 	private String purchaseOrdNo;
 	private LocalDate purchaseOrdDate;
-	
-	
-	@Override
-	public String toString() {
-		return "orderHeader [ordId=" + ordId + ", userName=" + userName + ", userMobileNo=" + userMobileNo
-				+ ", purchaseOrdNo=" + purchaseOrdNo + ", purchaseOrdDate=" + purchaseOrdDate + ", orderitems="
-				+ orderitems + ", address=" + address + "]";
-	}
 	private orderItems orderitems;
 	private address address;
 	public int getOrdId() {
@@ -72,5 +75,12 @@ public class orderHeader {
 		this.orderitems = orderitems;
 		this.address = address;
 	}
-
+	@Override
+	public String toString() {
+		return "orderHeader [ordId=" + ordId + ", userName=" + userName + ", userMobileNo=" + userMobileNo
+				+ ", purchaseOrdNo=" + purchaseOrdNo + ", purchaseOrdDate=" + purchaseOrdDate + ", orderitems="
+				+ orderitems + ", address=" + address + "]";
+	}
+	
+	
 }

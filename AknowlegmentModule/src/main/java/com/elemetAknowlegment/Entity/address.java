@@ -1,6 +1,17 @@
 package com.elemetAknowlegment.Entity;
 
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
 public class address {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int addId;
 	private String addressName;
 	private String address1;
@@ -68,3 +79,7 @@ public class address {
 	}
 	
 }
+
+
+
+
